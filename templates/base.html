@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant</title>
     <meta name="description" content="Restaurante localizado na região de Chapecó">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    {% load static %}
+    <link rel="icon" href="{% static 'assets/icons/restaurante.png' %}">
 </head>
 <body>
-    
+    <header>
+        <div class="banner">
+
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p><span id="year"></span> &copy; Todos os direitos reservados <a href="mailto:alexsanderesramos@gmail.com" target="_blank" >Alexsander Sautier</a></p>
+    </footer>
+
+    {% load static %}
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
