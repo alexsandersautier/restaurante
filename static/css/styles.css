@@ -23,6 +23,7 @@ main{
     justify-content: center;
     gap: 30px;
     max-width: 1288px;
+    margin: 0 auto;
 }
 
 footer{
@@ -38,6 +39,66 @@ footer > p{
     text-align: center;
 }
 
+nav{
+    width: 100%;
+    max-width: 1288px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav > ul{
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+li {
+    list-style: none;
+}
+
+li > a{
+  text-decoration: none;
+  color: #000;
+  background-color: #e1dede;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.categories{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button{
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #fff;
+    border-color: #fff;
+    outline: none;
+    padding: 5px 0;
+}
+
+.button:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.button > img{
+    width: 30px;
+    height: 30px;
+}
+
 @media screen and (max-width: 768px){
     
     .banner{
@@ -47,5 +108,24 @@ footer > p{
     footer > p{
         font-size: 14px;
         width: 80%;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .button{
+        width: 150px;
+    }
+
+    .categories{
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav > ul {
+        justify-content: center;
     }
 }

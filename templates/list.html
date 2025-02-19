@@ -1,4 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>List</p>
+<section class="categories">
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/entrada.png' %}" alt="entrada" loading="lazy">
+        entradas
+    </button>
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/massa.png' %}" alt="massa" loading="lazy">
+        massas
+    </button>
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/carne.png' %}" alt="carne" loading="lazy">
+        carnes
+    </button>
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/bebidas.png' %}" alt="bebida" loading="lazy">
+        bebidas
+    </button>
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/salada.png' %}" alt="salada" loading="lazy">
+        saladas
+    </button>
+    <button class="button">
+        {% load static %}
+        <img src="{% static 'assets/icons/sobremesa.png' %}" alt="sobremesa" loading="lazy">
+        sobremesas
+    </button>
+</section>
+
 {% endblock %}

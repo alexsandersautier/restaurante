@@ -16,6 +16,18 @@
         <div class="banner">
 
         </div>
+        {% if user.is_authenticated %}
+        <nav>
+            <p>Usuário: {{user.username}}</p>
+            <ul>
+                {% if user.is_superuser %}
+                <li><a href="">Cadastrar</a></li>
+                {% endif %}
+                <li><a href="">Login</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </nav>
+        {% endif %}
     </header>
     <main>
         {% block content %}
