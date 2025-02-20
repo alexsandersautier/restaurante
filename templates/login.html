@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST" class="form">
+    {% csrf_token %}
+    
+    <label for="{{ form.username.id_for_label }}" class="label">Usuário:</label>
+    {{ form.username }}
+    
+    <label for="{{ form.password.id_for_label }}" class="label">Senha:</label>
+    {{ form.password }}
+
+    <button type="submit" class="acessar">Acessar</button>
+
+    {% if error != '' %}
+        <p style="color: red;">Usuário ou senha inválidos.</p>
+    {% endif %}
+</form>
+
+{% endblock %}

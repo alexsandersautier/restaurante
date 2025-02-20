@@ -99,6 +99,30 @@ li > a{
     height: 30px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 400px - 100px);
+}
+
+.form > .user , .password {
+    padding: 8px 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.acessar {
+    width: 100px;
+    padding: 8px 5px;
+    border-radius: 10px;
+    margin-top: 5px;
+    background-color: #06860c;
+    color: #fff;
+    border-color: #06860c;
+}
+
 @media screen and (max-width: 768px){
     
     .banner{
