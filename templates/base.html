@@ -23,7 +23,8 @@
             <ul>
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
-                    <li><a href="">Cadastrar</a></li>
+                    {% load static %}
+                    <li><a href=""><img src="{% static 'assets/icons/adicionar.png' %}" alt="novo" width="15"> Novo</a></li>
                     {% endif %}
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}    
