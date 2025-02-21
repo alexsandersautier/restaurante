@@ -1,47 +1,53 @@
 {% extends 'base.html' %}
 {% block content %}
 <section class="categories">
-    <button class="button">
+    <button class="button" onclick="category('entradas')">
         {% load static %}
         <img src="{% static 'assets/icons/entrada.png' %}" alt="entrada" loading="lazy">
         entradas
     </button>
-    <button class="button">
+    <button class="button" onclick="category('massas')">
         {% load static %}
         <img src="{% static 'assets/icons/massa.png' %}" alt="massa" loading="lazy">
         massas
     </button>
-    <button class="button">
+    <button class="button" onclick="category('carnes')">
         {% load static %}
         <img src="{% static 'assets/icons/carne.png' %}" alt="carne" loading="lazy">
         carnes
     </button>
-    <button class="button">
+    <button class="button" onclick="category('bebidas')">
         {% load static %}
         <img src="{% static 'assets/icons/bebidas.png' %}" alt="bebida" loading="lazy">
         bebidas
     </button>
-    <button class="button">
+    <button class="button" onclick="category('saladas')">
         {% load static %}
         <img src="{% static 'assets/icons/salada.png' %}" alt="salada" loading="lazy">
         saladas
     </button>
-    <button class="button">
+    <button class="button" onclick="category('sobremesas')">
         {% load static %}
         <img src="{% static 'assets/icons/sobremesa.png' %}" alt="sobremesa" loading="lazy">
         sobremesas
     </button>
 </section>
+<section class="clean">
+    <button  onclick="clearFilter()">
+        X  
+    </button>
+    <p id="filters"></p>
+</section>
 <section class="search">
     <div>
         {% load static %}
         <img src="{% static 'assets/icons/lupa.png' %}" alt="lupa" loading="lazy" width="20">
-        <input type="search" name="search" id="" class="">
+        <input type="search" name="search" id="search" class="" oninput="filter(event)">
     </div>
 </section>
 <section class="list">
     {% for dish in dishes %}
-    <div class="card">
+    <div class="card" data-name="{{dish.name}}" data-category="{{dish.category}}">
         <div class="img">
             <img src="{{dish.photo.url}}" alt="{{dish.name}}">
         </div>
@@ -54,4 +60,6 @@
     </div>
     {% endfor %}
 </section>
+{% load static %}
+<script src="{% static 'js/list.js' %}"></script>
 {% endblock %}
