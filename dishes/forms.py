@@ -7,7 +7,7 @@ class DishModelForm(forms.ModelForm):
         model = Dish
         fields = ['name', 'description', 'category', 'price', 'photo']
         labels = {
-            'name': 'Nome do prato',
+            'name': 'Nome',
             'description': 'Descrição',
             'category': 'Categoria',
             'price': 'Preço', 
