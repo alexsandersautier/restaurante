@@ -24,7 +24,7 @@
                 {% if user.is_authenticated %}
                     {% if user.is_superuser %}
                     {% load static %}
-                    <li><a href=""><img src="{% static 'assets/icons/adicionar.png' %}" alt="novo" width="15"> Novo</a></li>
+                    <li><a href="{% url 'dish_create_view' %}"><img src="{% static 'assets/icons/adicionar.png' %}" alt="novo" width="15"> Novo</a></li>
                     {% endif %}
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                 {% else %}    

@@ -113,7 +113,50 @@ li > a{
     outline: none;
 }
 
-.acessar {
+.list{
+    display: flex;
+    align-items: center;
+    align-items: stretch;
+    flex-flow: row wrap;
+    width: 100%;
+    gap: 30px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex: 1;
+    height: 100%;
+}
+
+.card > .img{
+    flex: 1;
+    display: flex;
+}
+
+.card .img > img{
+    width: 100%;
+    flex: 1;
+}
+
+.card > .body{
+    flex: 1;
+    height: auto;
+}
+
+.form-create{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.btn{
     width: 100px;
     padding: 8px 5px;
     border-radius: 10px;
@@ -123,8 +166,43 @@ li > a{
     border-color: #06860c;
 }
 
+.search {
+    display: flex;
+    width: 100%;
+}
+
+.search > div{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid #c1c1c1;
+    padding: 0 5px;
+}
+
+.search div > input{
+    padding: 5px 10px;
+    border: none;
+    flex: 1;
+    outline: none;
+}
+
+
+
 @media screen and (max-width: 768px){
     
+    .card {
+        flex: auto;
+    }
+    .search > div{
+        margin: 0 5px;
+    }
+
+    .list {
+        width: 95%;
+    }
+
     .banner{
         height: 200px;
     }
@@ -150,6 +228,6 @@ li > a{
     }
 
     nav > ul {
-        justify-content: center;
+        justify-content: space-around;
     }
 }

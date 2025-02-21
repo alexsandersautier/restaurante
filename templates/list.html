@@ -32,5 +32,26 @@
         sobremesas
     </button>
 </section>
-
+<section class="search">
+    <div>
+        {% load static %}
+        <img src="{% static 'assets/icons/lupa.png' %}" alt="lupa" loading="lazy" width="20">
+        <input type="search" name="search" id="" class="">
+    </div>
+</section>
+<section class="list">
+    {% for dish in dishes %}
+    <div class="card">
+        <div class="img">
+            <img src="{{dish.photo.url}}" alt="{{dish.name}}">
+        </div>
+        <div class="body">
+            <h3>{{dish.name}}</h3>
+            <h4>{{dish.category}}</h4>
+            <p>{{dish.description}}</p>
+            <p><span>R$ {{dish.price|floatformat:2}}</span></p>
+        </div>
+    </div>
+    {% endfor %}
+</section>
 {% endblock %}
