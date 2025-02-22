@@ -1,0 +1,27 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "restaurante/wsgi.py",
+        "use": "@vercel/python"
+      },{
+        "src": "build_files.sh",
+        "use": "@vercel/static-build"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      }, 
+      {
+        "src": "/(.*)",
+        "dest": "restaurante/wsgi.py"
+      }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "core.settings",
+      "PYTHON_VERSION": "3.9"
+    }
+  }
+  
