@@ -1,3 +1,6 @@
+import django
+django.setup()
+
 from django.conf import settings
 
 settings.configure()
