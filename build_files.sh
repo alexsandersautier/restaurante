@@ -11,5 +11,4 @@ echo "Coletando arquivos estáticos..."
 python3 manage.py collectstatic --noinput
 
 echo "Criando user admin"
-export DJANGO_SETTINGS_MODULE=core.settings
-python3 create_superuser.py
+echo "admin\nadmin@admin.com\nadmin\ny\n" | python3 manage.py createsuperuser
