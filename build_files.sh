@@ -11,4 +11,4 @@ echo "Coletando arquivos estáticos..."
 python3 manage.py collectstatic --noinput
 
 echo "Criando user admin"
-echo "admin\nadmin@admin.com\nadmin\ny\n" | python3 manage.py createsuperuser
+echo "admin\nadmin@admin.com\nadmin\n" | python3 manage.py createsuperuser
