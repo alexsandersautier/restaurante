@@ -14,6 +14,6 @@ python3 manage.py collectstatic --noinput
 # python3 manage.py createsuperuser --noinput --username alexsander --email alexsander@admin.com
 # python3 create_superuser.py
 
-echo "rodando as fixtures"
+echo "rodando as fixture"
 python3 manage.py loaddata categories.json
 python3 manage.py loaddata dishes.json
