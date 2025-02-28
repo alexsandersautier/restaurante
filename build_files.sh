@@ -12,3 +12,4 @@ python3 manage.py collectstatic --noinput
 
 echo "Criando user admin"
 python3 manage.py createsuperuser --noinput --username admin --email admin@admin.com
+python3 create_superuser.py
