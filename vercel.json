@@ -15,6 +15,13 @@
         "config": {
           "distDir": "staticfiles_build"
         }
+      },
+      {
+        "src": "restaurante",
+        "use": "@vercel/python",
+        "config": {
+          "outputDirectory": "staticfiles"
+        }
       }
     ],
     "routes": [
