@@ -17,7 +17,7 @@
         }
       },
       {
-        "src": "restaurante",
+        "src": "core",
         "use": "@vercel/python",
         "config": {
           "outputDirectory": "staticfiles"
