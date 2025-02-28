@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 echo "Instalando as dependecias"
+python3 -m pip install --upgrade pip
 python3 -m pip install -r requirements.txt
 
 echo "Migrando banco de dados..."
